@@ -1,0 +1,22 @@
+<ng-progress color="white" [spinner]="false"></ng-progress>
+<app-header></app-header>
+<div id="page-container">
+  <div id="content-wrap">
+    <router-outlet></router-outlet>
+  </div>
+  <footer id="footer">
+    <app-footer></app-footer>
+  </footer>
+</div>
+<simple-notifications></simple-notifications>
+<app-login-modal></app-login-modal>
+<app-register-modal></app-register-modal>
+<app-register-company-modal></app-register-company-modal>
+<app-create-establishment-modal></app-create-establishment-modal>
+<div *ngIf="isEvent">
+  <app-create-event-modal></app-create-event-modal>
+</div>
+<app-remove-event-modal></app-remove-event-modal>
+<app-remove-establishment-modal></app-remove-establishment-modal>
+<app-filter-event-modal [cities]="cities"></app-filter-event-modal>
+<app-modal-warning></app-modal-warning>
